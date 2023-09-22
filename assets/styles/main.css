@@ -1,3 +1,42 @@
 body {
-  background-color: black;
+  background: black;
+  margin: 0;
 }
+
+hr {
+  border-width: 2px;
+  border-color: #c6f5ee;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 3% 5%;
+  }
+
+  .zone {
+    background: #c6f5ee;
+    cursor: pointer;
+    text-align: center;
+    line-height: 2;
+    font-size: 2em;
+    border-radius: 5%;
+    height: 60px;
+  }
+
+  .blank {
+    background: black;
+    cursor: default;
+  }
+
+  .fill {
+    grid-column-start: span 4;
+  }
+
+  #typing-block {
+    width: 100%;
+    height: 100px;
+  }
