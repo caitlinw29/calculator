@@ -3,40 +3,55 @@ body {
   margin: 0;
 }
 
-hr {
-  border-width: 2px;
-  border-color: #c6f5ee;
-}
-
-.number-grid {
+.calculator {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  padding: 3% 5%;
-  }
+  grid-column-gap: 4%;
+  grid-row-gap: 4%;
+  padding: 2% 5%;
+}
 
-  .zone {
-    background: #c6f5ee;
-    cursor: pointer;
-    text-align: center;
-    line-height: 2;
-    font-size: 2em;
-    border-radius: 5%;
-    height: 60px;
-  }
+.zone {
+  background: #c6f5ee;
+  cursor: pointer;
+  text-align: center;
+  line-height: 2;
+  font-size: 2em;
+  border-radius: 5%;
+  height: 60px;
+}
 
-  .blank {
+.fill-row {
+  grid-column: 1 / 5;
+}
+
+.tall {
+  height: 100px;
+  line-height: 3;
+  font-size: 3em;
+}
+
+.blank {
     background: black;
     cursor: default;
-  }
+}
 
-  .fill {
-    grid-column-start: span 4;
-  }
+.white-text {
+    color: white;
+}
 
-  #typing-block {
-    width: 100%;
-    height: 100px;
-  }
+.row-border {
+    border-top: 5px solid #c6f5ee;
+}
+
+.operation {
+  background: green;
+}
+
+.solve {
+  background: red;
+}
+
+.deletion {
+  background: gray;
+}
