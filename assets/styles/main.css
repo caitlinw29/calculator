@@ -22,6 +22,12 @@ button:hover {
   padding: 2% 5%;
 }
 
+#typing-block {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
 .zone {
   background: #c6f5ee;
   cursor: pointer;
