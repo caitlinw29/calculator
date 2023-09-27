@@ -27,6 +27,11 @@ calculator.addEventListener('click', (event) => {
     typingBlock.innerHTML += clickedBtn.textContent;
   }
 
+  //clear the typing block
+  if (clickedBtn.textContent==="C"){
+    clearBlock(typingBlock);
+  }
+
   //solve when clicking =
   if(clickedBtn.textContent==="="){
     calculate(typingBlock.textContent, typingBlock);
@@ -51,6 +56,6 @@ const calculate = (equation, typingBlock) => {
 //     clear(typingBlock);
 //   }
 // }
-// const clear = (typingBlock) => {
-//   typingBlock.innerHTML= "";
-// }
+const clearBlock = (typingBlock) => {
+  typingBlock.innerHTML= "";
+}
