@@ -49,16 +49,16 @@ button:hover {
 }
 
 .blank {
-    background: black;
-    cursor: default;
+  background: black;
+  cursor: default;
 }
 
 .white-text {
-    color: white;
+  color: white;
 }
 
 .row-border {
-    border-top: 5px solid #c6f5ee;
+  border-top: 5px solid #c6f5ee;
 }
 
 .operation {
@@ -71,4 +71,11 @@ button:hover {
 
 .deletion {
   background: gray;
+}
+
+@media only screen and (max-width: 600px) {
+  #typing-block {
+    font-size: 2em;
+    line-height: 5;
+  }
 }
