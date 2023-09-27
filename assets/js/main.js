@@ -60,6 +60,6 @@ const clearBlock = (typingBlock) => {
 }
 
 const backspace = (typingBlock) => {
-  const result = typingBlock.textContent.slice(0, -1); // Remove the last character
+  let result = typingBlock.textContent.slice(0, -1).trim(); // Remove the last character
   typingBlock.innerHTML= result;
 }
