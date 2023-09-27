@@ -23,13 +23,18 @@ calculator.addEventListener('click', (event) => {
 
   //Type what the user clicks, unless it's =
   const typingBlock = document.getElementById('typing-block');
-  if (clickedBtn.textContent !== "="){
+  if (clickedBtn.textContent !== "=" && clickedBtn.textContent !== "C" && clickedBtn.textContent !== "⌫"){
     typingBlock.innerHTML += clickedBtn.textContent;
   }
 
   //clear the typing block
   if (clickedBtn.textContent==="C"){
     clearBlock(typingBlock);
+  }
+
+  //backspace in the typing block
+  if (clickedBtn.textContent==="⌫"){
+    backspace(typingBlock);
   }
 
   //solve when clicking =
@@ -50,12 +55,11 @@ const calculate = (equation, typingBlock) => {
   typingBlock.innerHTML = answer;
 };
 
-//clear input in the typing block
-// for (const operation of operations){
-//   if (!clickedBtn.textContent.includes(operation)){
-//     clear(typingBlock);
-//   }
-// }
 const clearBlock = (typingBlock) => {
   typingBlock.innerHTML= "";
+}
+
+const backspace = (typingBlock) => {
+  const result = typingBlock.textContent.slice(0, -1); // Remove the last character
+  typingBlock.innerHTML= result;
 }
