@@ -1,4 +1,5 @@
 const calculator = document.getElementById('calculator');
+let answered = false;
 
 calculator.addEventListener('click', (event) => {
   //Listen for button clicks only
@@ -21,9 +22,14 @@ calculator.addEventListener('click', (event) => {
     }
   }
 
-  //Type what the user clicks, unless it's =
+  //Type what the user clicks, unless it's =, C, or backspace
   const typingBlock = document.getElementById('typing-block');
   if (clickedBtn.textContent !== "=" && clickedBtn.textContent !== "C" && clickedBtn.textContent !== "⌫"){
+    //clear the display first if a previous answer is there
+    if (answered===true && clickedBtn.classList.contains("num")){
+      clearBlock(typingBlock);
+    }
+    answered=false;
     typingBlock.innerHTML += clickedBtn.textContent;
   }
 
@@ -40,6 +46,7 @@ calculator.addEventListener('click', (event) => {
   //solve when clicking =
   if(clickedBtn.textContent==="="){
     calculate(typingBlock.textContent, typingBlock);
+    answered= true;
   }
   
 })
