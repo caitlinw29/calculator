@@ -50,6 +50,8 @@ Desktop View:
 - Light/Dark mode toggle
 - Code refactor
 - Implement without math.js?
+- Adjust scrolling when input is too long...user should see most recently typed characters, not the beginning of the equation
+
 ## Deployed Link
 
 See it live: [Calculator](https://caitlinw29.github.io/calculator/)
