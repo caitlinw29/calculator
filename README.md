@@ -28,7 +28,7 @@ The main goal is to create a responsive calculator that can compute simple math 
 
 ## Usage
 
-Either visit [Calculator](#https://caitlinw29.github.io/calculator/) in any browser, or fork this repository to use locally or make some changes.
+Either visit [Calculator](https://caitlinw29.github.io/calculator/) in any browser, or fork this repository to use locally or make some changes.
 
 ## License
 
@@ -52,4 +52,4 @@ Desktop View:
 - Implement without math.js?
 ## Deployed Link
 
-See it live: [Calculator](#https://caitlinw29.github.io/calculator/)
+See it live: [Calculator](https://caitlinw29.github.io/calculator/)
