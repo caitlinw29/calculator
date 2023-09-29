@@ -30,7 +30,7 @@ calculator.addEventListener('click', (event) => {
       clearBlock(typingBlock);
     }
     answered=false;
-    typingBlock.innerHTML += clickedBtn.textContent;
+    typingBlock.textContent += clickedBtn.textContent;
   }
 
   //clear the typing block
@@ -59,14 +59,14 @@ const calculate = (equation, typingBlock) => {
   });
   //using math.js to eval
   let answer = math.evaluate(stringToNumArr);
-  typingBlock.innerHTML = answer;
+  typingBlock.textContent = answer;
 };
 
 const clearBlock = (typingBlock) => {
-  typingBlock.innerHTML= "";
+  typingBlock.textContent= "";
 }
 
 const backspace = (typingBlock) => {
   let result = typingBlock.textContent.slice(0, -1).trim(); // Remove the last character
-  typingBlock.innerHTML= result;
+  typingBlock.textContent= result;
 }
